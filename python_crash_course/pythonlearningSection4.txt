@@ -1,0 +1,195 @@
+array vs list
+array dont contain commas
+arrays is special for holding numerical data
+
+numpy
+
+    --generally numpy arrays are homogeneous
+    --we have to import numpy using a alias
+    --np.arange - similar as list(range()) function
+          --difference between both is range creates a list arange creates array
+np.power(np.array([1, 2, 3]), 4)
+    --converts list or tuples intro array then powers the array by 4
+no.negetive(np.array([1, 2, 3]))
+    --returns a negetive array
+np.exp(array)
+    --returns exponential of the array
+    --exp(x) = e^x where e= 2.718281(approx)
+np.log(x) is the natural logarithm, i.e. the power to which e would have to be raised to equal x
+
+sin(x[, out]) = ufunc ‘sin’) : This mathematical function helps user to calculate trignmetric 
+      sine for all x(being the array elements)
+
+multi_array = np.array((x ,y ,z))
+     --creates a multi dimensional array from 3 1D array
+
+w = np.linspace(1, 10, 20, boolean(default true))
+     --can be used instead of arrange func
+     --the thrid number defines how many elements will be selected contrary of arrange where
+       the third number was step . 
+     --in linspace the stop number is included in array while in arrange the stop number
+       is excluded
+     --if we set the boolean to false then the stop number is excluded
+
+multi_array = np.array((x ,y ,z), dtype = np.int16/32/64 / np.uint8(unsigned))
+     --declares output type
+
+
+array slicing
+     --see list slicing notes
+
+x = np.arange(9).reshape(3/n, 3/m)
+     --reshapes a 1D array to a 3 by 3 2D array
+     --n = number of rows, m = number of coloumns
+     --n*m must be equal to number of total elements
+
+x = np.arange(8).reshape(2, 2, -1)
+     --first number indicates how many blocks will be created
+     --as we declared 2 rows -1 (denotes unknwon dimension) will work out such as desired 2 column
+       shape is created using 8 elements
+
+x = np.arange(18).reshape(3, 2, 3)
+x[1, 0:2, 0:3]
+     --index of array to slice, slicing of row, slicing of column
+
+Section 4 : video 49. slicing 2d array
+
+x[1, :2, :3]
+x[1, :, :]
+x[1, ...] ellipse
+x[:, ...]
+x[:, 0, 0]
+x[1, :2, :3:2]
+x[comparioson_operation] -- prints the array based on the condition
+
+x.max() -- max element
+x.min() -- min element
+
+x.ravel() -- makes multidimensional array into 1D array
+
+x.flatten() -- makes multidimensional array into 1D array
+
+x.ravel() view the same original array and changes also occur in original array - no new memory is
+	  allocated - faster in operation
+
+x.flatten() makes new copy array distinguished from original array and changes will only occur in copy 
+	    array - allocates new memory
+
+y = np.arange(9)
+y.shape = [3, 3] -- same as reshape
+y.transpose() -- switches the row and column
+(y.T) -- same as transpose
+np.resize(y, (6, 6)) - outputs resized array where data is repeated to fill the new size
+
+np.zeros((6,), dtype = int) -- array with zeros
+np.ones((6,), dtype = int) -- array with ones
+(np.eye(3, dtype = int)) - The eye tool returns a 2-D array with  1’s as the diagonal and  0’s elsewhere
+
+np.random.rand(4, 4) -- 4 by 4 matrix with unifrom distribution of 0-1
+
+np.matmul(mat_A, mat_B) -- same as multiplying the both matrix
+
+np.array vs np.matrix -- As per the official documents, it's not anymore advisable to use matrix class 
+		         since it will be removed in the future. works the same
+
+mat_A @ mat_B -- same multiplication
+
+z = np.hstack((x, y)) -- stacks two arrays into one -- both arrays must have same shape along 1st axis
+		         concatenates horizontally -- horizontal stack
+
+z = np.vstack((x, y)) -- vertically stacks. concatenates vertically -- must have same 2nd axis
+
+Summary
+      -- horizontal stacking occurs along the second axis, second dimension (n, M) increasing the number
+	 columns
+      -- the second axis runs horizontally along the columns
+
+      -- vertical stacking occurs along the first axis, first dimension (N, m) increasing the number of rows
+      -- the first axis runs vertically downwards
+
+w = np.concatenate((x, y), axis = 0) -- vertical stacking
+w = np.concatenate((x, y), axis = 1) -- horizontal stacking
+
+depth_stack = np.dstack((x, y)) -- adds another dimension while stacking
+      --When stacking of Numpy array is performed along the third axis(depth) (number of floors)then it is called depth
+	stacking. Numpy provides dstack() function to carry out depth stacking.
+
+x = np.arange(4).reshape(2, 2, 1) -- The outermost dimension will have 2 arrays that contains 2 arrays, each with 1 elements
+
+np.column_stack((x, y)) -- function is used to stack 1-D arrays as columns into a 2-D array.It takes a sequence of 1-D arrays 
+	and stack them as columns to make a single 2-D array. 2-D arrays are stacked as-is, just like with hstack function
+
+Numpy row_stack() function is used to stack 1-Dimensional array row-wise. And 2-Dimensional array is stacked similar to 
+	vertical stacking(vstack()).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

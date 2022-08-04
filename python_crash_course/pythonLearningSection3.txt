@@ -1,0 +1,175 @@
+** - power function
+// round a division to nearest integer
+print () - prints
+using comma we can assign multiple variable at same time
+snake_case
+black slash (/) to not read single quote as the end of string
+concatenate strings using '+'
+strings can be multiplied
+len() to calculate characters in a string 
+logical operators = and -- or -- not(flips the value to false) 
+string_title.upper() -- uppercase whole string
+string_title.lower() -- lowecase whole string
+string_title.title() -- uppercase the first character
+string_title.count('character') -- find a specific character how many times repeated
+list and tuple
+array = list in python
+list can contain all types of data types in same time.
+we can index from the end of a list using negetive values such as -1 denotes the
+last element of a list.
+slicing
+1. array[starting index : ending index + 1]
+2. array[ :ending index + 1] -- starts from begining
+3. array[starting index : len(array)] -- ends in list end
+   or array[starting index : ] 
+4. array [ : ] -- full list
+printing list in a range (other than inputing all numbers)
+   -- list_array(range(staring index, ending index + 1))
+   -- list_array((range(ending index + 1)) --- assuems the staring index is zero
+   -- list_array(range(staring index, ending index + 1, 5)) --- numbers will be printed at a step size of 5
+Sting is like list --- can do all the list operations on string
+membership operators = in(returns boolean values if a character is in the specified string) -- not in(counterproductive of in)
+   -- 'character/string' in list / 'character/string' not in list
+mutable = changeble object
+immutable = not changeble object
+strings = immutable (cant be changed directly)
+list = mutable (can change any index value) 
+    -- value changes will occur in all declared mutable data type objects simultaneously
+    -- in immutable data type  value change will reassign only the last object
+list/string functions
+1. len(list/string) -- returns the total number of elements
+2. max(list_numbers) -- returns the max element
+   max(string) -- returns the max in alphabetical order
+3. min(list_numbers) -- returns the min element
+   min(string) -- returns the min in alphabetical order
+4. sorted(list_numbers) -- sorts numbers in order
+   sorted(string) -- sorts string in alphabetical order
+5. sorted can be used to sort any list containing same data type values
+join method
+    -- 'separator string'.join(list) --- joint every string in the list with the separator string (only string list)
+format method
+    -- string.format(value1, value2...) --- The format() method formats the specified value(s) and insert them inside 
+       the string's placeholder.
+append method
+    -- list.append(elemnt) --- The append() method appends an element to the end of the list.
+list and tuples
+1. lists : mutable ordered sequence of elements
+2. tuples : immutable ordered sequence of elements
+list -- mylist = ["apple", "banana", "cherry"]
+tuple --  mytuple = ("apple", "banana", "cherry") N.B parenthesis can be removed
+sets
+    --immutable
+    --Sets are used to store multiple items in a single variable
+    --A set is a collection which is both unordered and unindexed
+    --A set is a collection which is both unordered and unindexed
+    --Set items are unordered, unchangeable, and do not allow duplicate values.
+    --Unordered means that the items in a set do not have a defined order.
+    --Sets are unchangeable, meaning that we cannot change the items after the set has been created.
+    --Sets cannot have two items with the same value.
+    --we can use len() to measure the length os a set
+    --to check a element inside of a set use --- in
+    --add an element in set using --- .add()
+example 
+    -- duplicate_number = [1,1,2,2]
+       unique_number = set(duplicate_number)
+    ---{1, 2}
+    -- unique_number.add(3)
+       {1, 2, 3}
+dictionaries
+    --mutable
+    --Dictionaries are used to store data values in key:value pairs.
+    --A dictionary is a collection which is ordered*, changeable and does not allow duplicates.
+    --Dictionaries are written with curly brackets, and have keys and values:
+    --Dictionary items are ordered, changeable, and does not allow duplicates.
+    --Dictionary items are presented in  key:value  pairs, and can be referred to by using the key name.
+    --unordered
+    --can be accessed using keys
+    --use .get(key) to get the value of specified key
+    --to check a element inside of a dictionarie use --- in
+    --we can create complex dictionaries
+example
+    --thisdict =	{
+      "brand": "Ford",
+      "model": "Mustang",
+      "year": 1964
+      }
+      print(thisdict)
+    --{'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
+if / else
+    -- be carefull about indentation
+elif
+    -- The elif keyword is pythons way of saying "if the previous conditions were not true, then try this condition".
+    -- its used between if and else statement
+for loop
+    -- iterates based on iterable
+    -- iterable
+    -- syntax --- for list in list_title :
+	              print(list)
+              --- for number in range(0, 100) :
+	              print(number)
+    -- in dictionaries we can iterate by keys or using both
+    -- using key only - syntax --- for key in dictionary : 
+    -- using both - syntax --- for (key, value) in dictionary.items() :
+                                  print (key, value)
+    -- .items() method used for iterating using both key and value
+    -- for format method - syntax --- print('this item {}, price {}'.format(key, value))
+while loops
+    -- indefinite iterations
+    -- iterates based on condition
+continue keyword
+    -- The continue keyword is used to end the current iteration in a for loop (or a while loop), and 
+       continues to the next iteration.
+break keyword
+    -- The break keyword is used to break out a for loop, or a while loop
+functions
+    -- performs a specific task
+    -- resuable
+    -- In Python a function is defined using the def keyword:
+    example -- def my_function():
+	       my_function()
+scope
+    -- A variable is only available from inside the region it is created. This is called scope.
+    -- local --- variable names assigned within a function
+    -- global --- names assigned at the top level of a module file
+docstrings
+    -- string literal that documents a segment of code
+    -- syntax --- """ comment """
+Higher Order Functions in Python
+    -- A function is called Higher Order Function if it contains other functions as a parameter or returns 
+       a function as an output i.e, the functions that operate with another function are known as Higher order Functions
+    -- example --- def shout(text): 
+                       return text.upper() 
+                   print(shout('Hello'))
+filter ()
+    -- The filter() function returns an iterator were the items are filtered through a function to test if the item is accepted or not.
+    -- syntax --- filter(function, iterable)
+lambda 
+    -- A lambda function is a small anonymous function.
+    -- A lambda function can take any number of arguments, but can only have one expression.
+    -- mostly used in higher  order function if a function is not needed more then once
+    -- syntax --- lambda arguments : expression
+    -- example --- numbers = [1, 2, 3, 4]
+                   print ( list ( filter ( lambda number : number % 2 == 0 , numbers )))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
